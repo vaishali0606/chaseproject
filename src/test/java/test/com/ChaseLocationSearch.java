@@ -20,6 +20,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -89,6 +90,7 @@ public class ChaseLocationSearch {
     driver.findElement(By.id("q")).click();
     driver.findElement(By.id("q")).clear();
     driver.findElement(By.id("q")).sendKeys(zipCode);
+    driver.findElement(By.id("q")).sendKeys(Keys.RETURN);
    }
     
    @Test
@@ -107,6 +109,8 @@ public class ChaseLocationSearch {
     driver.findElement(By.id("q")).click();
     driver.findElement(By.id("q")).clear();
     driver.findElement(By.id("q")).sendKeys(zipCode2);
+    driver.findElement(By.id("q")).sendKeys(Keys.RETURN);
+
    }
     
    @Test
